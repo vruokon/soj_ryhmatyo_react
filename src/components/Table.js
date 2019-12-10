@@ -20,7 +20,7 @@ const TableBody = props => {
         <td>{row.paiva}</td>
         <td>{row.yritys}</td>
         <td>{row.summa}</td>
-        <td>
+        <td className="buttonSarake">
           <button onClick={() => props.poistaMaksu(i)}>X</button>
         </td>
       </tr>

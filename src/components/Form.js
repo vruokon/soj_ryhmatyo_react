@@ -13,7 +13,8 @@ class Form extends Component {
     this.state = this.initialState;
   }
 
-  kasitteleMuutos = event => {
+  //Tarvitaan inputtien kanssa, mahdollista käyttää inputtien arvojen validointiin
+  handleChange = event => {
     const { name, value } = event.target;
 
     this.setState({
@@ -21,6 +22,7 @@ class Form extends Component {
     });
   };
 
+  //Lahettaa formin app.js:lle
   onFormSubmit = event => {
     event.preventDefault();
 
@@ -33,13 +35,13 @@ class Form extends Component {
     return (
       <form onSubmit={this.onFormSubmit}>
         <label>Maksaja</label>
-        <input type="text" name="maksaja" value={maksaja} onChange={this.kasitteleMuutos} />
+        <input type="text" name="maksaja" value={maksaja} onChange={this.handleChange} />
         <label>Paiva</label>
-        <input type="text" name="paiva" value={paiva} onChange={this.kasitteleMuutos} />
+        <input type="text" name="paiva" value={paiva} onChange={this.handleChange} />
         <label>Yritys</label>
-        <input type="text" name="yritys" value={yritys} onChange={this.kasitteleMuutos} />
+        <input type="text" name="yritys" value={yritys} onChange={this.handleChange} />
         <label>Summa</label>
-        <input type="text" name="summa" value={summa} onChange={this.kasitteleMuutos} />
+        <input type="text" name="summa" value={summa} onChange={this.handleChange} />
         <input type="submit" value="Submit" />
       </form>
     );

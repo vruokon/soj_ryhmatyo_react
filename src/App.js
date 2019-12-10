@@ -9,7 +9,7 @@ class App extends Component {
   state = {
     maksuInfo: [
       {
-        maksaja: "Martti",
+        maksaja: "Esimerkki",
         paiva: "19.8.2019",
         yritys: "Fortum",
         summa: 20.0
@@ -30,7 +30,6 @@ class App extends Component {
   };
 
   lisaaMaksu = maksu => {
-    console.log(maksu);
     this.setState({ maksuInfo: [...this.state.maksuInfo, maksu] });
   };
 
