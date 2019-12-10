@@ -2,11 +2,13 @@ import React, { Component } from "react";
 
 const TableHeader = props => {
   return (
-    <tr key={"header"}>
-      {props.headerInfo.map((header, i) => (
-        <th key={i}>{header}</th>
-      ))}
-    </tr>
+    <thead>
+      <tr key={"header"}>
+        {props.headerInfo.map((header, i) => (
+          <th key={i}>{header}</th>
+        ))}
+      </tr>
+    </thead>
   );
 };
 
@@ -18,6 +20,9 @@ const TableBody = props => {
         <td>{row.paiva}</td>
         <td>{row.yritys}</td>
         <td>{row.summa}</td>
+        <td>
+          <button onClick={() => props.removeCharacter(i)}>X</button>
+        </td>
       </tr>
     );
   });
@@ -26,12 +31,12 @@ const TableBody = props => {
 
 class Table extends Component {
   render() {
-    const { maksuInfo, headerInfo } = this.props;
+    const { maksuInfo, headerInfo, removeCharacter } = this.props;
     return (
-      <div>
+      <table>
         <TableHeader headerInfo={headerInfo} />
-        <TableBody maksuInfo={maksuInfo} />
-      </div>
+        <TableBody maksuInfo={maksuInfo} removeCharacter={removeCharacter} />
+      </table>
     );
   }
 }

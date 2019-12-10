@@ -18,12 +18,22 @@ class App extends Component {
     headerInfo: ["Maksaja", "Paiva", "Yritys", "Summa"]
   };
 
+  removeCharacter = index => {
+    const { maksuInfo } = this.state;
+
+    this.setState({
+      maksuInfo: maksuInfo.filter((character, i) => {
+        return i !== index;
+      })
+    });
+  };
+
   render() {
     const { maksuInfo, headerInfo } = this.state;
 
     return (
       <div className="container">
-        <Table maksuInfo={maksuInfo} headerInfo={headerInfo} />
+        <Table maksuInfo={maksuInfo} headerInfo={headerInfo} removeCharacter={this.removeCharacter} />
       </div>
     );
   }
