@@ -21,7 +21,7 @@ const TableBody = props => {
         <td>{row.yritys}</td>
         <td>{row.summa}</td>
         <td>
-          <button onClick={() => props.removeCharacter(i)}>X</button>
+          <button onClick={() => props.poistaMaksu(i)}>X</button>
         </td>
       </tr>
     );
@@ -31,11 +31,11 @@ const TableBody = props => {
 
 class Table extends Component {
   render() {
-    const { maksuInfo, headerInfo, removeCharacter } = this.props;
+    const { maksuInfo, headerInfo, poistaMaksu } = this.props;
     return (
       <table>
         <TableHeader headerInfo={headerInfo} />
-        <TableBody maksuInfo={maksuInfo} removeCharacter={removeCharacter} />
+        <TableBody maksuInfo={maksuInfo} poistaMaksu={poistaMaksu} />
       </table>
     );
   }

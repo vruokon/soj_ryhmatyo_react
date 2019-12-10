@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import "./App.css";
-import Table from "./components/Table";
 
 //component imports:
+import Table from "./components/Table";
+import Form from "./components/Form";
 
 class App extends Component {
   state = {
@@ -18,14 +19,19 @@ class App extends Component {
     headerInfo: ["Maksaja", "Paiva", "Yritys", "Summa"]
   };
 
-  removeCharacter = index => {
+  poistaMaksu = index => {
     const { maksuInfo } = this.state;
 
     this.setState({
-      maksuInfo: maksuInfo.filter((character, i) => {
+      maksuInfo: maksuInfo.filter((maksaja, i) => {
         return i !== index;
       })
     });
+  };
+
+  lisaaMaksu = maksu => {
+    console.log(maksu);
+    this.setState({ maksuInfo: [...this.state.maksuInfo, maksu] });
   };
 
   render() {
@@ -33,7 +39,8 @@ class App extends Component {
 
     return (
       <div className="container">
-        <Table maksuInfo={maksuInfo} headerInfo={headerInfo} removeCharacter={this.removeCharacter} />
+        <Table maksuInfo={maksuInfo} headerInfo={headerInfo} poistaMaksu={this.poistaMaksu} />
+        <Form lisaaMaksu={this.lisaaMaksu} />
       </div>
     );
   }
