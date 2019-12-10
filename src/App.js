@@ -40,3 +40,5 @@ class App extends Component {
 }
 
 export default App;
+
+//testataan toimivuutta - Perttu
