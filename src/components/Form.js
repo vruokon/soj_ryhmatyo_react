@@ -4,7 +4,7 @@ class Form extends Component {
   constructor(props) {
     super(props);
     this.initialState = {
-      maksaja: "",
+      maksaja: "Matti",
       paiva: "",
       yritys: "",
       summa: ""
@@ -35,7 +35,11 @@ class Form extends Component {
     return (
       <form onSubmit={this.onFormSubmit}>
         <label>Maksaja</label>
-        <input type="text" name="maksaja" value={maksaja} onChange={this.handleChange} />
+          <select name="maksaja" value={maksaja} onChange={this.handleChange}>
+            <option value="Matti">Matti</option>
+            <option value="Maija">Maija</option>
+          </select>
+
         <label>Paiva</label>
         <input type="text" name="paiva" value={paiva} onChange={this.handleChange} />
         <label>Yritys</label>

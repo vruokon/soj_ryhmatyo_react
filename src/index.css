@@ -33,6 +33,13 @@ form {
   border-radius: 2px;
 }
 
+select {
+	width: 150px;
+	padding:1.5px;
+	margin: 5px;
+	resize: vertical;
+}
+
 input {
   margin: 5px;
   resize: vertical;
