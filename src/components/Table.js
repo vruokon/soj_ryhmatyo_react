@@ -24,7 +24,7 @@ const TableBody = props => {
         <td>{row.yritys}</td>
         <td>{row.summa}</td>
         <td className="buttonSarake">
-          <button onClick={() => props.poistaMaksu(i)}>X</button>
+          <button onClick={() => props.poistaMaksu(i)}>Poista</button>
         </td>
       </tr>
     );

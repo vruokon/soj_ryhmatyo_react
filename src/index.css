@@ -47,14 +47,21 @@ select {
 	resize: vertical;
 }
 
-input {
+input[type=submit] {
+  background-color: lightseagreen;
+  color: white;
   margin: 5px;
   padding: 3px;
   border: 1px solid lightcoral;
   border-radius: 4px;
   cursor: pointer;
-
+  float: center;
 }
+
+input[type=submit]:hover {
+    background-color: #555555;
+}
+
 .buttonSarake {
   border-bottom: none;
 }
@@ -80,6 +87,6 @@ input[type=text], select, textarea {
   clear: both;
   margin: 4px;
   resize: vertical;
-
+  block-size: 40px;
 }
 
