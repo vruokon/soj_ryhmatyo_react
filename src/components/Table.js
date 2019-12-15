@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+//import Button from '@material-ui/core/Button';
+//import EditIcon from 'material-ui/svg-icons/image/edit';
+
 
 const TableHeader = props => {
   return (
@@ -29,6 +32,7 @@ const TableBody = props => {
   return <tbody>{rows}</tbody>;
 };
 
+
 class Table extends Component {
   render() {
     const { maksuInfo, headerInfo, poistaMaksu } = this.props;
@@ -40,5 +44,6 @@ class Table extends Component {
     );
   }
 }
+
 
 export default Table;
