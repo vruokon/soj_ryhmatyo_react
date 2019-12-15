@@ -24,12 +24,18 @@ button {
   border-bottom: none;
 }
 form {
-  width: 50%;
+  width: 80%;
   margin: auto;
-  margin-top: 20px;
+  margin-top: 25px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid grey;
+  border-radius: 2px;
 }
+
 input {
   margin: 5px;
+  resize: vertical;
 }
 .buttonSarake {
   border-bottom: none;
@@ -48,5 +54,6 @@ input {
 .buttonSarake:hover {
   background-color: #555555;
 }
+
 
 

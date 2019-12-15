@@ -13,6 +13,7 @@ class App extends Component {
         paiva: "19.8.2019",
         yritys: "Fortum",
         summa: 20.0
+        
         // the rest of the data
       }
     ],
@@ -33,6 +34,7 @@ class App extends Component {
     this.setState({ maksuInfo: [...this.state.maksuInfo, maksu] });
   };
 
+
   render() {
     const { maksuInfo, headerInfo } = this.state;
 
@@ -47,4 +49,4 @@ class App extends Component {
 
 export default App;
 
-//testataan toimivuutta - Perttu
+
