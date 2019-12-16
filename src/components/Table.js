@@ -16,7 +16,7 @@ const TableHeader = props => {
 };
 
 const TableBody = props => {
-  const rows = props.maksuInfo.map((row, i, e) => {
+  const rows = props.maksuInfo.map((row, i,) => {
     return (
       <tr key={i}>
         <td>{row.maksaja}</td>
@@ -28,7 +28,7 @@ const TableBody = props => {
         </td>    
           
         <td className="Editbutton">
-        <button>Edit</button>
+        <button>Muokkaa</button>
         </td>
          
         
@@ -53,11 +53,5 @@ class Table extends Component {
     );
   }
 }
-
-
-
- 
-
-
 
 export default Table;
