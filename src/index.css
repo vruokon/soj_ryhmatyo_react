@@ -29,6 +29,8 @@ td {
 }
 button {
   border-bottom: none;
+  
+  
 }
 form {
   width: 50%;
@@ -63,23 +65,19 @@ input[type=submit]:hover {
     background-color: #555555;
 }
 
-.buttonSarake {
-  border-bottom: none;
-}
+
 
 .buttonSarake {
-  border: 2px solid #555555;
-  background-color: #e7e7e7;
+  background-color: lightseagreen;
   font-size: 16px;
-  padding: 12px 28px;
+  padding: 16px 14px;
   border-radius: 8px;
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
+  display: flex;
 }
 
-.buttonSarake:hover {
-  background-color: #555555;
-}
+
 
 input[type=text],[type=date], select, textarea {
   width: 100%;
@@ -92,7 +90,5 @@ input[type=text],[type=date], select, textarea {
   block-size: 40px;
 }
 
-.Editbutton {
-  
-}
+
 
