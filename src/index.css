@@ -12,6 +12,7 @@ code {
 table {
   width: 50%;
   margin: auto;
+  margin-top: 25px;
   text-align: center;
   background-color: lightseagreen;
   border: solid 1px lightcoral;
