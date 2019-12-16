@@ -25,11 +25,11 @@ const TableBody = props => {
         <td>{row.summa}</td>
         <td className="buttonSarake">
         <button onClick={() => props.poistaMaksu(i)}>Poista</button>     
-          
+          <tr key={e}>
           <td className="Editbutton">
-          <button>Edit</button>
+          <button onDoubleClick={() => props.EditButton()}>Edit</button>
           </td>
-         
+          </tr>
         </td>
       </tr>
     );
