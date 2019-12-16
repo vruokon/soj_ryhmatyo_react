@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
-//import EditButton from 'react-edit-button'
+
+
 
 //component imports:
 import Table from "./components/Table";
@@ -21,29 +22,6 @@ class App extends Component {
     headerInfo: ["Maksaja", "Paiva", "Yritys", "Summa"]
   };
 
-  
-  /*onInputChange = (e) => {
-    this.setState({ text: e.target.value})
-  }
-
-  handleEditButtonClick = () => {
-    this.setState({ editMode: true})
-  }
-  
-  handleOnContainerClick = () => {
-    console.log('app element click')
-    this.setState({ editMode: true})
-  }
-  
-  onAccept = (text) => {
-    this.setState({ text })
-  }
-
-  onReject = (text) => {
-    console.log('do nothing')
-    this.setState({ text, editMode: false})
-  }
- */
 
   poistaMaksu = index => {
     const { maksuInfo } = this.state;
@@ -63,41 +41,14 @@ class App extends Component {
 
   render() {
     const { maksuInfo, headerInfo } = this.state;
-    /*const EditButtonProps = {
-      // inputProps = {
-      //   value: this.state.text,
-      //   placeholder: 'Enter text',
-      //   onChange: this.handleInputChange,
-      // },
-      // editButtonProps = {
-      //   text: 'Edit',
-      //   icon: undefined,
-      // },
-      // containerProps = {
-      //   // any properties you want to add to the container div element
-      // },
-      // onContainerClick: this.handleOnContainerClick,
-      // onEditButtonClick: this.handleEditButtonClick,
-      // hideEditButton: true,
-      // editMode: this.state.editMode,
-      onAccept: this.onAccept,
-      // onReject: this.onReject,
-      //hoverToShowEditButton: true,
-    }
-
-    <EditButton { ...EditButtonProps }>
-        <span>{ this.state.text }</span>
-      </EditButton>
-*/
+  
+    
     return (
       <div className="container">
         <Table maksuInfo={maksuInfo} headerInfo={headerInfo} poistaMaksu={this.poistaMaksu} />
         <Form lisaaMaksu={this.lisaaMaksu} /> 
       </div>
       
-      
-    
-    
     
      
     );
@@ -107,3 +58,46 @@ class App extends Component {
 export default App;
 
 
+/*state = {
+        value: "Some text here",
+        isInEditMode: false
+    }
+
+    changeEditMode = () => {
+        this.setState({
+            isInEditMode: !this.state.isInEditMode
+        })
+        
+    }
+
+    updateComponentValue = () => {
+        this.setState({
+            isInEditMode: false,
+            value: this.refs.theTextInput.value
+        })
+    }
+
+    renderEditView = () => {
+        return <div>
+        <input
+        type="text"
+        defaultValue={this.state.value}
+        ref="theTextInput"
+        />
+        <button onClick={this.changeEditMode}>Edit</button>
+        <button onClick={this.updateComponentValue}>OK</button>
+        </div>
+    }
+
+    renderDefaultView = () => {
+        return <div onDoubleClick={this.changeEditMode}>
+        {this.state.value}
+    </div>
+    }
+
+    render() {
+        return this.state.isInEditMode ?
+        this.renderEditView() :
+        this.renderDefaultView()
+    }
+}*/

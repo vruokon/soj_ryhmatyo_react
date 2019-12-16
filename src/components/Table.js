@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 //import Button from '@material-ui/core/Button';
 //import EditIcon from 'material-ui/svg-icons/image/edit';
-
+//import EditButton from 'react-edit-button'
 
 const TableHeader = props => {
   return (
@@ -16,7 +16,7 @@ const TableHeader = props => {
 };
 
 const TableBody = props => {
-  const rows = props.maksuInfo.map((row, i) => {
+  const rows = props.maksuInfo.map((row, i, a) => {
     return (
       <tr key={i}>
         <td>{row.maksaja}</td>
@@ -25,6 +25,16 @@ const TableBody = props => {
         <td>{row.summa}</td>
         <td className="buttonSarake">
           <button onClick={() => props.poistaMaksu(i)}>Poista</button>
+          
+          <tr key={a}>
+            <td>{row.maksaja}</td>
+            <td>{row.paiva}</td>
+            <td>{row.yritys}</td>
+            <td>{row.summa}</td>
+            <td className="Editbutton">
+          <button onDoubleClick={() => props.EditButton(a)}>Edit</button>
+         </td>
+          </tr>
         </td>
       </tr>
     );
@@ -32,18 +42,26 @@ const TableBody = props => {
   return <tbody>{rows}</tbody>;
 };
 
-
 class Table extends Component {
   render() {
     const { maksuInfo, headerInfo, poistaMaksu } = this.props;
+
+  
+
     return (
       <table>
         <TableHeader headerInfo={headerInfo} />
-        <TableBody maksuInfo={maksuInfo} poistaMaksu={poistaMaksu} />
+        <TableBody maksuInfo={maksuInfo} poistaMaksu={poistaMaksu} />  
       </table>
+      
     );
   }
 }
+
+
+
+ 
+
 
 
 export default Table;
