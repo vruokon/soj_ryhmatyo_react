@@ -24,13 +24,14 @@ const TableBody = props => {
         <td>{row.yritys}</td>
         <td>{row.summa}</td>
         <td className="buttonSarake">
-        <button onClick={() => props.poistaMaksu(i)}>Poista</button>     
+        <button onClick={() => props.poistaMaksu(i)}>Poista</button> 
+        </td>    
           
-          <td className="Editbutton">
-          <button>Edit</button>
-          </td>
-         
+        <td className="Editbutton">
+        <button>Edit</button>
         </td>
+         
+        
       </tr>
     );
   });
