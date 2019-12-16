@@ -27,10 +27,6 @@ const TableBody = props => {
           <button onClick={() => props.poistaMaksu(i)}>Poista</button>
           
           <tr key={a}>
-            <td>{row.maksaja}</td>
-            <td>{row.paiva}</td>
-            <td>{row.yritys}</td>
-            <td>{row.summa}</td>
             <td className="Editbutton">
           <button onDoubleClick={() => props.EditButton(a)}>Edit</button>
          </td>

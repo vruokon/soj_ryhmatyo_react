@@ -41,7 +41,7 @@ class Form extends Component {
           </select>
 
         <label>Paiva</label>
-        <input type="text" name="paiva" value={paiva} required pattern = "[^a-zA-Z]+" onChange={this.handleChange} />
+        <input type="date" name="paiva" value={paiva} required pattern= "/^$|\s+/"  onChange={this.handleChange} />
         <label>Yritys</label>
         <input type="text" name="yritys" value={yritys} required pattern="[a-zA-Z]+" onChange={this.handleChange} />
         <label>Summa</label>
