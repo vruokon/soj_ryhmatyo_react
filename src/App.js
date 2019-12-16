@@ -14,7 +14,7 @@ class App extends Component {
     maksuInfo: [
       {
         maksaja: "Esimerkki",
-        paiva: "19.8.2019",
+        päivä: "19.8.2019",
         yritys: "Fortum",
         summa: 20.0
       
