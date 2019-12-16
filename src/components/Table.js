@@ -31,6 +31,8 @@ const TableBody = props => {
           </td>
           </tr>
         </td>
+         
+        
       </tr>
     );
   });
