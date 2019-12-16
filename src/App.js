@@ -5,6 +5,7 @@ import "./App.css";
 //component imports:
 import Table from "./components/Table";
 import Form from "./components/Form";
+import LowerTable from "./components/LowerTable";
 
 class App extends Component {
   state = {
@@ -15,10 +16,20 @@ class App extends Component {
         paiva: "19.8.2019",
         yritys: "Fortum",
         summa: 20.0
-        // the rest of the data
+      
       }
     ],
-    headerInfo: ["Maksaja", "Paiva", "Yritys", "Summa"]
+    headerInfo: ["Maksaja", "Paiva", "Yritys", "Summa"],
+
+    summary: [
+      {
+        tasaus: 0,
+        laskuMäärä: 0,
+        loppuSumma: 0
+      }
+    ],
+
+    lowerTableHeader: ["Tasaus", "Laskumäärä", "Loppusumma"]
   };
 
   
@@ -62,7 +73,7 @@ class App extends Component {
   
 
   render() {
-    const { maksuInfo, headerInfo } = this.state;
+    const { maksuInfo, headerInfo, summary, lowerTableHeader } = this.state;
     /*const EditButtonProps = {
       // inputProps = {
       //   value: this.state.text,
@@ -92,6 +103,7 @@ class App extends Component {
     return (
       <div className="container">
         <Table maksuInfo={maksuInfo} headerInfo={headerInfo} poistaMaksu={this.poistaMaksu} />
+        <LowerTable lowerTableHeader={lowerTableHeader} summary={summary}/>
         <Form lisaaMaksu={this.lisaaMaksu} /> 
       </div>
       
