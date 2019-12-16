@@ -63,20 +63,19 @@ input[type=submit]:hover {
     background-color: #555555;
 }
 
-.buttonSarake {
-  border-bottom: none;
-}
+
 
 .buttonSarake {
   border: 2px solid #555555;
   background-color: #e7e7e7;
-  font-size: 16px;
-  padding: 6px 28px;
-  border-radius: 8px;
+  font-size: 6px;
+  padding: 6px 14px;
+  border-radius: 4px;
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
   clear:both;
   float: right;
+  margin: 6px;
   
 }
 
@@ -94,6 +93,8 @@ input[type=text],[type=date], select, textarea {
   resize: vertical;
   block-size: 40px;
 }
-
+.buttonSarake{
+  display:flex;
+}
 
 
