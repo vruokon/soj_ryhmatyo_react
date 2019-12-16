@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import EditButton from 'react-edit-button'
+//import EditButton from 'react-edit-button'
 
 //component imports:
 import Table from "./components/Table";
@@ -22,7 +22,7 @@ class App extends Component {
   };
 
   
-  onInputChange = (e) => {
+  /*onInputChange = (e) => {
     this.setState({ text: e.target.value})
   }
 
@@ -43,7 +43,7 @@ class App extends Component {
     console.log('do nothing')
     this.setState({ text, editMode: false})
   }
- 
+ */
 
   poistaMaksu = index => {
     const { maksuInfo } = this.state;
@@ -63,7 +63,7 @@ class App extends Component {
 
   render() {
     const { maksuInfo, headerInfo } = this.state;
-    const EditButtonProps = {
+    /*const EditButtonProps = {
       // inputProps = {
       //   value: this.state.text,
       //   placeholder: 'Enter text',
@@ -85,13 +85,14 @@ class App extends Component {
       //hoverToShowEditButton: true,
     }
 
+    <EditButton { ...EditButtonProps }>
+        <span>{ this.state.text }</span>
+      </EditButton>
+*/
     return (
       <div className="container">
         <Table maksuInfo={maksuInfo} headerInfo={headerInfo} poistaMaksu={this.poistaMaksu} />
         <Form lisaaMaksu={this.lisaaMaksu} /> 
-        <EditButton { ...EditButtonProps }>
-        <span>{ this.state.text }</span>
-      </EditButton>
       </div>
       
       
