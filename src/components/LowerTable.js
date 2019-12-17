@@ -40,9 +40,9 @@ const laskeErotus = (array) => {
   var hlö2KokonaisSumma = endSum(hlö2);
 //Luodaan ehto jolla luodaan Tasaukseen tarvittava erotus
   if (hlö1KokonaisSumma > hlö2KokonaisSumma) {
-    return hlö1KokonaisSumma - hlö2KokonaisSumma + "€ Maijalle";
+    return (hlö1KokonaisSumma - hlö2KokonaisSumma)/2 + "€ Maijalle";
   } else if(hlö1KokonaisSumma < hlö2KokonaisSumma) {
-    return hlö2KokonaisSumma - hlö1KokonaisSumma + "€ Matille";
+    return (hlö2KokonaisSumma - hlö1KokonaisSumma)/2 + "€ Matille";
   } else {
     return "Maksut tasan";
   }
