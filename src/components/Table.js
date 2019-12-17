@@ -16,7 +16,7 @@ const TableHeader = props => {
 };
 
 const TableBody = props => {
-  const rows = props.maksuInfo.map((row, i, e) => {
+  const rows = props.maksuInfo.map((row, i,) => {
     return (
       <tr key={i}>
         <td>{row.maksaja}</td>
@@ -24,12 +24,20 @@ const TableBody = props => {
         <td>{row.yritys}</td>
         <td>{row.summa}</td>
         <td className="buttonSarake">
+<<<<<<< HEAD
         <button onClick={() => props.poistaMaksu(i)}>Poista</button>     
           <tr key={e}>
           <td className="Editbutton">
           <button onDoubleClick={() => props.EditButton()}>Edit</button>
           </td>
           </tr>
+=======
+        <button onClick={() => props.poistaMaksu(i)}>Poista</button> 
+        </td>    
+          
+        <td className="Editbutton">
+        <button>Muokkaa</button>
+>>>>>>> c78d27c08946cf9c43549656ce5a82394e51bbd2
         </td>
          
         
@@ -54,11 +62,5 @@ class Table extends Component {
     );
   }
 }
-
-
-
- 
-
-
 
 export default Table;

@@ -9,31 +9,17 @@ import Form from "./components/Form";
 import LowerTable from "./components/LowerTable";
 
 class App extends Component {
-  state = {
-    editMode:false,
-    maksuInfo: [
-      {
-        maksaja: "Esimerkki",
-        päivä: "19.8.2019",
-        yritys: "Fortum",
-        summa: 20.0
+  constructor(props) {
+    super(props);
+    this.state = {
+      editMode: false,
+      maksuInfo: [],
+      headerInfo: ["Maksaja", "Paiva", "Yritys", "Summa"],
       
-      }
-    ],
-    headerInfo: ["Maksaja", "Paiva", "Yritys", "Summa"],
-
-    summary: [
-      {
-        tasaus: 0,
-        laskuMäärä: 0,
-        loppuSumma: 0
-      }
-    ],
-
-    lowerTableHeader: ["Tasaus", "Laskumäärä", "Loppusumma"]
-  };
-
-
+      lowerTableHeader: ["Tasaus", "Laskumäärä", "Kokonais summa"]
+    };
+  }
+  
   poistaMaksu = index => {
     const { maksuInfo } = this.state;
 
@@ -48,10 +34,10 @@ class App extends Component {
     this.setState({ maksuInfo: [...this.state.maksuInfo, maksu] });
   };
 
-  
 
   render() {
-    const { maksuInfo, headerInfo, summary, lowerTableHeader } = this.state;
+    const { maksuInfo, headerInfo, lowerTableHeader } = this.state;
+    //Tässä vähän yritettiin tehdä edit nappia.
     /*const EditButtonProps = {
       // inputProps = {
       //   value: this.state.text,
@@ -81,19 +67,16 @@ class App extends Component {
     return (
       <div className="container">
         <Table maksuInfo={maksuInfo} headerInfo={headerInfo} poistaMaksu={this.poistaMaksu} />
-        <LowerTable lowerTableHeader={lowerTableHeader} summary={summary}/>
-        <Form lisaaMaksu={this.lisaaMaksu} /> 
+        <LowerTable lowerTableHeader={lowerTableHeader} maksuInfo={maksuInfo} />
+        <Form lisaaMaksu={this.lisaaMaksu} />
       </div>
-      
-    
-     
     );
   }
 }
 
 export default App;
 
-
+//Toinen edit nappulan malli
 /*state = {
         value: "Some text here",
         isInEditMode: false
@@ -103,7 +86,7 @@ export default App;
         this.setState({
             isInEditMode: !this.state.isInEditMode
         })
-        
+
     }
 
     updateComponentValue = () => {
