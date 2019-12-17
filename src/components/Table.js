@@ -29,7 +29,7 @@ const TableBody = props => {
         <button onClick={() => props.poistaMaksu(i)}>Poista</button>     
         </td>
           <td className="Editbutton">
-          <button onDoubleClick>Edit</button> 
+          <button>Edit</button> 
         </td>
          </tr>
     );
