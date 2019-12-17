@@ -3,6 +3,7 @@ import React, { Component } from "react";
 //import EditIcon from 'material-ui/svg-icons/image/edit';
 //import EditButton from 'react-edit-button'
 
+//Rakennetaan Tablen header
 const TableHeader = props => {
   return (
     <thead>
@@ -15,6 +16,7 @@ const TableHeader = props => {
   );
 };
 
+// Rakennetaan Tablen body
 const TableBody = props => {
   const rows = props.maksuInfo.map((row, i,) => {
     return (
@@ -30,8 +32,7 @@ const TableBody = props => {
         <td className="Editbutton">
         <button>Muokkaa</button>
         </td>
-         
-        
+                 
       </tr>
     );
   });
@@ -39,10 +40,10 @@ const TableBody = props => {
 };
 
 class Table extends Component {
+
+  //Rakennetaan Table
   render() {
     const { maksuInfo, headerInfo, poistaMaksu } = this.props;
-
-  
 
     return (
       <table>

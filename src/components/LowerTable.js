@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 
+//Rakennetaan LowerTablen header
 const TableHeader2 = props => {
   return (
     <thead>
@@ -47,7 +48,7 @@ const laskeErotus = (array) => {
   }
 }
 
-//Rakennetaan tablen ulkomuoto ja tulokset oikeille paikoilleen
+//Rakennetaan LowerTablen body ja lisätään tulokset oikeille paikoilleen
 const TableBody2 = props => {
   const maksuInfo = props.maksuInfo;
   var loppusumma = endSum(maksuInfo);
@@ -64,6 +65,8 @@ const TableBody2 = props => {
 };
 
 class LowerTable extends Component {
+  
+  //Rakennetaan LowerTable
   render() {
     const { maksuInfo, lowerTableHeader } = this.props;
     return (

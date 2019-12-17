@@ -29,6 +29,8 @@ class Form extends Component {
     this.props.lisaaMaksu(this.state);
     this.setState(this.initialState);
   };
+
+  // Rakennetaan lomake sarakkeineen, mukana myös yksinkertaista validointia
   render() {
     const { maksaja, paiva, yritys, summa } = this.state;
 

@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
 
-
-
 //component imports:
 import Table from "./components/Table";
 import Form from "./components/Form";
@@ -20,6 +18,7 @@ class App extends Component {
     };
   }
   
+  // Poistaa maksutiedon
   poistaMaksu = index => {
     const { maksuInfo } = this.state;
 
@@ -30,11 +29,12 @@ class App extends Component {
     });
   };
 
+  // Lisää maksutiedon
   lisaaMaksu = maksu => {
     this.setState({ maksuInfo: [...this.state.maksuInfo, maksu] });
   };
 
-
+  // Rakentaa sivun ulkoasun
   render() {
     const { maksuInfo, headerInfo, lowerTableHeader } = this.state;
     //Tässä vähän yritettiin tehdä edit nappia.
