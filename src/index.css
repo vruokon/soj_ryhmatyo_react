@@ -25,16 +25,6 @@ table {
 
 th {
   border-bottom: solid 2px grey;
-
-  
-}
-td {
-<<<<<<< HEAD
- 
-=======
-
-
->>>>>>> c78d27c08946cf9c43549656ce5a82394e51bbd2
 }
 button {
   border-bottom: none;
@@ -73,6 +63,7 @@ input[type=submit] {
 
 input[type=submit]:hover {
     background-color: #555555;
+    color: white;
 }
 
 
