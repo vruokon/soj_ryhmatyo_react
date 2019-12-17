@@ -16,7 +16,7 @@ const TableHeader2 = props => {
 const endSum = (array) => {
   var count = 0;
   for (var i = 0; i < array.length; i++) {
-    count = count + parseInt(array[i].summa);
+    count = count + parseFloat(array[i].summa);
   }
   return count;
 };
@@ -39,9 +39,11 @@ const laskeErotus = (array) => {
   var hlö2KokonaisSumma = endSum(hlö2);
 //Luodaan ehto jolla luodaan Tasaukseen tarvittava erotus
   if (hlö1KokonaisSumma > hlö2KokonaisSumma) {
-    return hlö1KokonaisSumma - hlö2KokonaisSumma;
+    return hlö1KokonaisSumma - hlö2KokonaisSumma + "€ Maijalle";
+  } else if(hlö1KokonaisSumma < hlö2KokonaisSumma) {
+    return hlö2KokonaisSumma - hlö1KokonaisSumma + "€ Matille";
   } else {
-    return hlö2KokonaisSumma - hlö1KokonaisSumma;
+    return "Maksut tasan";
   }
 }
 
